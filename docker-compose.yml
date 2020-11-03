@@ -1,0 +1,11 @@
+version: '3'
+services:
+  line-decompiler:
+    hostname: 'line-decompiler'
+    restart: always
+    build: .
+    container_name: 'ubuntu'
+    working_dir: '/workspace'
+    tty: true
+    volumes:
+      - ./workspace:/workspace
